@@ -8,6 +8,13 @@ services:
       - '443:443'
     volumes:
       - app:/app
+      
+  filebrowser:
+    image: 'filebrowser/filebrowser:latest'
+    ports:
+       - 80:8080
+    volumes:
+      - app:/srv
 
 volumes:
-  app:  
+  app: 
